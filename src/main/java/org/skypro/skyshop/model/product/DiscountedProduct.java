@@ -1,12 +1,14 @@
 package org.skypro.skyshop.model.product;
 
+import java.util.UUID;
+
 public class DiscountedProduct extends Product {
 
     private final int basePrise;
     private final int wholePercentDiscount;
 
-    public DiscountedProduct(String nameProduct, int basePrise, int wholePercentDiscount) {
-        super(nameProduct);
+    public DiscountedProduct(String nameProduct, int basePrise, int wholePercentDiscount, UUID id) {
+        super(nameProduct,id);
         checkBasePriceAndWholePercentDiscount(basePrise,wholePercentDiscount);
         this.basePrise = basePrise;
         this.wholePercentDiscount = wholePercentDiscount;
